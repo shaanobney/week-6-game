@@ -87,7 +87,7 @@ $(document).ready(function() {
     });
     
     $(document).on('click', '.image', function() {
-        var queryURL = "http://api.giphy.com/v1/gifs?&api_key=dc6zaTOxFJmzC&limit=12&ids="+ $(this).attr('data-name');
+        var queryURL = "https://api.giphy.com/v1/gifs?&api_key=dc6zaTOxFJmzC&limit=12&ids="+ $(this).attr('data-name');
         var thisImageUrl = $(this).attr('src');
         var parentDivValue = $(this).parent('div').attr('data-value');
         $.ajax({url: queryURL, method: 'GET'}).done(function(response) {
