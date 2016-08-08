@@ -94,6 +94,26 @@
 }
 
 @font-face {
+    font-family: king;
+    src: url("../css/king.ttf");
+}
+
+@font-face {
+    font-family: mario;
+    src: url("../css/mario.ttf");
+}
+
+@font-face {
+    font-family: mickey;
+    src: url("../css/mickey.ttf");
+}
+
+@font-face {
+    font-family: pokemon;
+    src: url("../css/pokemon.ttf");
+}
+
+@font-face {
     font-family: topple;
     src: url("../css/topple1.ttf");
 }
@@ -297,7 +317,7 @@ ul {
 #headline h1 {
 	color: black;
 	margin-top: 2px;
-	font-size: 40pt;
+	font-size: 1.75em;
 	text-align: center;
 	height: 30px;
 }

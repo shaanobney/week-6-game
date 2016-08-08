@@ -15,13 +15,12 @@ $(document).ready(function() {
         'PAPRIKA',
         'TRON',
         ]
+
     //CHANGES ELEMENTS COLOR AND FONT RANDOMLY EVERY PAGE LOAD
     var randomColor = function() {
       var colors = ["#FFB5C5", "#EE7AE9", "#8B7B8B", "#3D59AB", "#C6E2FF", "#1E90FF", "#00F5FF", "#7FFFD4", "#EEEE00", "#EE9A00", "#EE9A00", "#FF3030", "#282828", "#7A7A7A", "#CCCCCC", "#333333", "#990099"];              
-      var fonts = ["pioneer", "arcade", "ed", "mex", "sand", "sf", "topplez", "columna", "deutsch", "lead", "storyboo", "diamonds", "dork", "november", "blox", "crackman", "games", "slaytanic", "topple", "zorque"];
-      // var rando = Math.floor(Math.random()*colors.length);
+      var fonts = ["pioneer", "arcade", "pacmania", "ed", "mex", "sand", "sf", "topplez", "columna", "deutsch", "lead", "king", "mario", "mickey", "pokemon", "storyboo", "diamonds", "iomanoid", "dork", "november", "blox", "crackman", "games", "slaytanic", "topple", "zorque"];
       var rando = Math.floor(Math.random() * colors.length);
-      // var randoma = Math.floor(Math.random()*fonts.length);
       var randoma = Math.floor(Math.random() * fonts.length);          
       $('#title').css("color", colors[rando]);
       $('#title').css("font-family", fonts[randoma]);
@@ -57,7 +56,7 @@ $(document).ready(function() {
 
  //CLICK ON TOPIC
     $(document).on('click','.newTopic', function() {
-        $('#title').remove(); //CLEARS GIF FIELD
+        // $('#title').remove(); //CLEARS TITLE FIELD
         $('.gif').remove(); //CLEARS GIF FIELD
 	
         
@@ -96,10 +95,10 @@ $(document).ready(function() {
             
             if(thisImageUrl == still) {
                 thisImageUrl = moving;
-                $('div[data-value='+parentDivValue+']').children('.image').attr('src', thisImageUrl);
+                $('div[data-value='+ parentDivValue +']').children('.image').attr('src', thisImageUrl);
             }else if (thisImageUrl == moving){
                 thisImageUrl = still;
-                $('div[data-value='+parentDivValue+']').children('.image').attr('src', thisImageUrl);
+                $('div[data-value='+ parentDivValue +']').children('.image').attr('src', thisImageUrl);
             }
         });
     });
