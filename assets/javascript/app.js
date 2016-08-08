@@ -62,7 +62,7 @@ $(document).ready(function() {
 	
         
         var select = $(this).text() //STORES BUTTON NAME IN VAR SELECT
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + select + "&api_key=dc6zaTOxFJmzC&limit=12"; //ADD BUTTON NAME TO SEARCH
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + select + "&api_key=dc6zaTOxFJmzC&limit=12"; //ADD BUTTON NAME TO SEARCH
 
         $.ajax({ 
                 url: queryURL,

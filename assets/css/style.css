@@ -166,16 +166,16 @@
 @-moz-keyframes myThird /* Firefox */
     {
     0%   {color:#fefdfb;}
-    33%  {color:lime;}
-    66%   {color:blue;}
+    33%  {color:#86C67C;}
+    66%   {color:#499DF5;}
     100%   {color:#fefdfb;}
     }
 
 @-webkit-keyframes myThird /* Safari and Chrome */
     {
     0%   {color:#fefdfb;}
-    33%  {color:lime;}
-    66%   {color:blue;}
+    33%  {color:#86C67C;}
+    66%   {color:#499DF5;}
     100%   {color:#fefdfb;}
     }
 
