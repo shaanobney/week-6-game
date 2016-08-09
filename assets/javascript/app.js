@@ -69,12 +69,16 @@ $(document).ready(function() {
             })
             .done(function(response) {
                 var results = response.data
-                for (i=0; i<results.length; i++){
+                for (i = 0; i < results.length; i++) {
                 var gif = $('<div class=gif>').attr('data-value', i); //CREATES DIV FOR GIF
                 var p = $('<p class="rating">').text('rating: '+ results[i].rating); //PRINTS MPAA RATING
                 var searchImage = $('<img class="image">').attr('src',results[i].images.fixed_height_still.url); //CREATES IMAGE
             		searchImage.css('margin', '2px').attr('data-name', results[i].id);
+                $('body').on('DOMNodeInserted', '.gif', function () {
+                    $('.gif').addClass('animated LightSpeedIn'); 
+                });
                 $('#imageDump').prepend(gif.append(searchImage).append(p)); //APPEND TO IMAGEDUMP
+
                  }
              })
         });
