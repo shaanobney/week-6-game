@@ -336,7 +336,7 @@ ul {
 	padding: 20px;
 	border-radius: 4px;
 	background-repeat: repeat-x;
-	animation: slideleft 9000s infinite linear;
+	animation: slideleft 25000s infinite linear;
 }
 
 #imageDump div {
