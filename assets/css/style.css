@@ -89,6 +89,11 @@
 }
 
 @font-face {
+    font-family: lead;
+    src: url("../fonts/lead.ttf");
+}
+
+@font-face {
     font-family: king;
     src: url("../fonts/king.ttf");
 }
