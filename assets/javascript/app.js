@@ -63,11 +63,7 @@ $(document).ready(function() {
         
         var select = $(this).text()
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + select + "&api_key=dc6zaTOxFJmzC&limit=12";
-
-        $.ajax({ 
-                url: queryURL,
-                method: 'GET'
-            })
+        $.ajax({ url: queryURL, method: 'GET' })
             .done(function(response) {
                 var results = response.data
                 for (i = 0; i < results.length; i++) {
@@ -86,11 +82,7 @@ $(document).ready(function() {
         
         var select = $(this).text()
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + select + "&api_key=dc6zaTOxFJmzC&limit=12";
-
-        $.ajax({ 
-                url: queryURL,
-                method: 'GET'
-            })
+        $.ajax({ url: queryURL, method: 'GET' })
             .done(function(response) {
                 var results = response.data
                 for (i = 0; i < results.length; i++) {
