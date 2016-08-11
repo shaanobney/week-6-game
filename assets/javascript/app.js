@@ -16,7 +16,7 @@ $(document).ready(function() {
         'TRON',
         ]
 
-    //CHANGES ELEMENTS COLOR AND FONT RANDOMLY EVERY PAGE LOAD
+    //CHANGES COLOR AND FONT RANDOMLY EVERY PAGE LOAD
     var randomColor = function() {
       var colors = ["#FFB5C5", "#EE7AE9", "#8B7B8B", "#3D59AB", "#C6E2FF", "#1E90FF", "#00F5FF", "#7FFFD4", "#FCD116", "#EE9A00", "#EE9A00", "#FF3030", "#282828", "#7A7A7A", "#CCCCCC", "#333333", "#990099"];              
       var fonts = ["pioneer", "arcade", "pacmania", "ed", "mex", "sand", "sf", "park", "deutsch", "lead", "king", "mario", "beam", "pokemon", "storyboo", "diamonds", "iomanoid", "dork", "november", "blox", "crackman", "games", "slaytanic", "zorque"];
@@ -30,7 +30,7 @@ $(document).ready(function() {
     //CREATES BUTTONS FROM TOPIC ARRAY
     var buttFactory = function() {
         for (i = 0; i < topics.length; i++) {
-            var button = $('<button class="newTopic">').text(topics[i]);
+            var button = $('<button class="topic">').text(topics[i]);
             $('#buttons').append(button);
         }
     }
@@ -40,7 +40,6 @@ $(document).ready(function() {
     //ADD BY BUTTON
     $('#add').on('click', function() {
         var newTopic = $('#input').val();
-        topics.push(newTopic)
         var button = $('<button class="newTopic">').text(newTopic);
         $('#buttons').append(button);
         $('#input').val('');
@@ -50,17 +49,17 @@ $(document).ready(function() {
     $('#input').keydown(function (e) {
     if(e.keyCode == 13){
         var newTopic = $('#input').val();
-        topics.push(newTopic)
         var button = $('<button class="newTopic">').text(newTopic);
         $('#buttons').append(button);
         $('#input').val('');
     }
     })
 
-    //CLICK ON TOPIC
-    $(document).on('click','.newTopic', function() {
+    //CLICK ON TOPIC. CLEARS IMAGEDUMP, MAKES DIV FOR EACH GIF.
+
+        $(document).on('click','.topic', function() {
         // $('#title').remove(); //CLEARS TITLE FIELD
-        $('.gif').remove(); //CLEARS GIF FIELD
+        $('.vom').remove();
         
         var select = $(this).text()
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + select + "&api_key=dc6zaTOxFJmzC&limit=12";
@@ -72,18 +71,36 @@ $(document).ready(function() {
             .done(function(response) {
                 var results = response.data
                 for (i = 0; i < results.length; i++) {
-                var gif = $('<div class=gif>').attr('data-value', i);
+                var vom = $('<div class=vom>').attr('data-value', i);
                 var p = $('<p class="rating">').text('rating: '+ results[i].rating);
                 var searchImage = $('<img class="image">').attr('src',results[i].images.fixed_height_still.url);
-            		searchImage.css('margin', '2px').attr('data-name', results[i].id);
-                $('#imageDump').prepend(gif.append(searchImage).append(p));
+                    searchImage.css('margin', '2px').attr('data-name', results[i].id);
+                $('#imageDump').prepend(vom.append(searchImage).append(p));
             }
         })
     });
 
-    $(document).on('click', '#reset', function() {
-        $('.gif').remove();
-        $('#input').val('');
+    $(document).on('click','.newTopic', function() {
+        // $('#title').remove(); //CLEARS TITLE FIELD
+        $('.vom').remove();
+        
+        var select = $(this).text()
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + select + "&api_key=dc6zaTOxFJmzC&limit=12";
+
+        $.ajax({ 
+                url: queryURL,
+                method: 'GET'
+            })
+            .done(function(response) {
+                var results = response.data
+                for (i = 0; i < results.length; i++) {
+                var vom = $('<div class=vom>').attr('data-value', i);
+                var p = $('<p class="rating">').text('rating: '+ results[i].rating);
+                var searchImage = $('<img class="image">').attr('src',results[i].images.fixed_height_still.url);
+            		searchImage.css('margin', '2px').attr('data-name', results[i].id);
+                $('#imageDump').prepend(vom.append(searchImage).append(p));
+            }
+        })
     });
 
     $(document).on('click', '.image', function() {
@@ -101,6 +118,12 @@ $(document).ready(function() {
                 $('div[data-value='+ parentDivValue +']').children('.image').attr('src', thisImageUrl);
             }
         });
+    });
+    //RESET
+    $(document).on('click', '#reset', function() {
+        $('.vom').remove();
+        $('.newTopic').remove();
+        $('#input').val('');
     });
 
 });

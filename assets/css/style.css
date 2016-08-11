@@ -235,15 +235,6 @@ button:nth-child(2n-1) {
 		animation:myFourth 30s;
 	}
 
-img {
-	margin: 2px;
-	width: 322px;
-	height: 222px;
-	border: solid 1px white;
-	border-radius: 4px;
-	cursor: pointer;
-}
-
 ul {
     margin: 0;
     padding: 0;
@@ -255,7 +246,7 @@ ul {
 	margin-bottom: 5%;
 }
 
-.gif {
+.vom {
 
 }
 
@@ -328,6 +319,16 @@ ul {
 	background-repeat: repeat-x;
 	animation: slideleft 25000s infinite linear;
 }
+
+#imageDump img {
+	margin: 2px;
+	width: 322px;
+	height: 222px;
+	border: solid 1px white;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
 
 #imageDump div {
 	display: inline-block;
