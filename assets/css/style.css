@@ -1,131 +1,121 @@
 @font-face {
     font-family: pioneer;
-    src: url("../css/pioneerbt.ttf");
+    src: url("../fonts/pioneerbt.ttf");
 }
 
 @font-face {
     font-family: futura;
-    src: url("../css/futura.ttf");
+    src: url("../fonts/futura.ttf");
 }
 
 @font-face {
     font-family: november;
-    src: url("../css/november.ttf");
+    src: url("../fonts/november.ttf");
 }
 
 @font-face {
     font-family: dork;
-    src: url("../css/dork.ttf");
+    src: url("../fonts/dork.ttf");
 }
 
 @font-face {
     font-family: pacmania;
-    src: url("../css/pacmania.ttf");
+    src: url("../fonts/pacmania.ttf");
 }
 
 @font-face {
     font-family: diamonds;
-    src: url("../css/diamonds.ttf");
+    src: url("../fonts/diamonds.ttf");
 }
 
 @font-face {
     font-family: arcade;
-    src: url("../css/arcade.ttf");
+    src: url("../fonts/arcade.ttf");
 }
 
 @font-face {
     font-family: blox;
-    src: url("../css/blox.ttf");
+    src: url("../fonts/blox.ttf");
 }
 
 @font-face {
     font-family: crackman;
-    src: url("../css/crackman.ttf");
+    src: url("../fonts/crackman.ttf");
 }
 
 @font-face {
-    font-family: ed;
-    src: url("../css/ed.ttf");
+    font-family: ed
+    src: url("../fonts/ed.ttf");
 }
 
 @font-face {
     font-family: mex;
-    src: url("../css/mex.ttf");
+    src: url("../fonts/mex.ttf");
 }
 
 @font-face {
     font-family: sf;
-    src: url("../css/sf.ttf");
+    src: url("../fonts/sf.ttf");
 }
 
 @font-face {
     font-family: sand;
-    src: url("../css/sand.ttf");
-}
-
-@font-face {
-    font-family: topplez;
-    src: url("../css/topplez.ttf");
+    src: url("../fonts/sand.ttf");
 }
 
 @font-face {
     font-family: games;
-    src: url("../css/games.ttf");
+    src: url("../fonts/games.ttf");
 }
 
 @font-face {
     font-family: iomanoid;
-    src: url("../css/iomanoid.ttf");
+    src: url("../fonts/iomanoid.ttf");
 }
 
 @font-face {
     font-family: storyboo;
-    src: url("../css/storyboo.ttf");
+    src: url("../fonts/storyboo.ttf");
 }
 
 @font-face {
     font-family: slaytanic;
-    src: url("../css/slaytanic.ttf");
+    src: url("../fonts/slaytanic.ttf");
 }
 
 @font-face {
     font-family: zorque;
-    src: url("../css/zorque.ttf");
+    src: url("../fonts/zorque.ttf");
 }
 
 @font-face {
     font-family: king;
-    src: url("../css/king.ttf");
+    src: url("../fonts/king.ttf");
 }
 
 @font-face {
     font-family: mario;
-    src: url("../css/mario.ttf");
+    src: url("../fonts/mario.ttf");
 }
 
 @font-face {
     font-family: park;
-    src: url("../css/park.ttf");
+    src: url("../fonts/park.ttf");
 }
 
 @font-face {
     font-family: pokemon;
-    src: url("../css/pokemon.ttf");
-}
-
-@font-face {
-    font-family: topple;
-    src: url("../css/topple1.ttf");
+    src: url("../fonts/pokemon.ttf");
 }
 
 @font-face {
     font-family: deutsch;
-    src: url("../css/deutsch.ttf");
+    src: url("../fonts/deutsch.ttf");
 }
 
 @font-face {
     font-family: beam;
-    src: url("../css/beam.ttf");
+    src: url("../fonts/beam.ttf");
 }
 
 @keyframes slideleft {
