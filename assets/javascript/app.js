@@ -71,11 +71,11 @@ $(document).ready(function() {
             .done(function(response) {
                 var results = response.data
                 for (i = 0; i < results.length; i++) {
-                var vom = $('<div class=vom>').attr('data-value', i);
                 var p = $('<p class="rating">').text('rating: '+ results[i].rating);
-                var searchImage = $('<img class="image">').attr('src',results[i].images.fixed_height_still.url);
-                    searchImage.css('margin', '2px').attr('data-name', results[i].id);
-                $('#imageDump').prepend(vom.append(searchImage).append(p));
+                var vom = $('<div class=vom>').attr('data-value', i);
+                var buttImage = $('<img class="image">').attr('src',results[i].images.fixed_height_still.url);
+                    buttImage.css('margin', '2px').attr('data-name', results[i].id);
+                $('#imageDump').prepend(vom.append(buttImage).append(p));
             }
         })
     });
@@ -94,11 +94,11 @@ $(document).ready(function() {
             .done(function(response) {
                 var results = response.data
                 for (i = 0; i < results.length; i++) {
-                var vom = $('<div class=vom>').attr('data-value', i);
                 var p = $('<p class="rating">').text('rating: '+ results[i].rating);
-                var searchImage = $('<img class="image">').attr('src',results[i].images.fixed_height_still.url);
-            		searchImage.css('margin', '2px').attr('data-name', results[i].id);
-                $('#imageDump').prepend(vom.append(searchImage).append(p));
+                var vom = $('<div class=vom>').attr('data-value', i);
+                var buttImage = $('<img class="image">').attr('src',results[i].images.fixed_height_still.url);
+            		buttImage.css('margin', '2px').attr('data-name', results[i].id);
+                $('#imageDump').prepend(vom.append(buttImage).append(p));
             }
         })
     });
