@@ -171,18 +171,18 @@
     100%   {color:#fefdfb;}
     }
 
-@-moz-keyframes myThird /* Firefox */
+@-moz-keyframes myFourth /* Firefox */
     {
     0%   {color:#fefdfb;}
-    33%  {color:#86C67C;}
+    33%  {color:##ADD8E6;}
     66%   {color:#499DF5;}
     100%   {color:#fefdfb;}
     }
 
-@-webkit-keyframes myThird /* Safari and Chrome */
+@-webkit-keyframes myFourth /* Safari and Chrome */
     {
     0%   {color:#fefdfb;}
-    33%  {color:#86C67C;}
+    33%  {color:#ADD8E6;}
     66%   {color:#499DF5;}
     100%   {color:#fefdfb;}
     }
