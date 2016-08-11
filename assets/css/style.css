@@ -104,8 +104,8 @@
 }
 
 @font-face {
-    font-family: mickey;
-    src: url("../css/mickey.ttf");
+    font-family: park;
+    src: url("../css/park.ttf");
 }
 
 @font-face {
@@ -124,15 +124,13 @@
 }
 
 @font-face {
-    font-family: columna;
-    src: url("../css/columna.ttf");
+    font-family: beam;
+    src: url("../css/beam.ttf");
 }
 
-
-
-@keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 100% 0; }
+@keyframes slideleft {
+  from { background-position: 0%; }
+  to { background-position: 90000%; }
 }
 
 @-moz-keyframes myfirst /* Firefox */
@@ -267,6 +265,10 @@ ul {
 	margin-bottom: 5%;
 }
 
+.gif {
+
+}
+
 .jumbotron {
 	margin-bottom: 0px;
 	color: white;
@@ -275,6 +277,10 @@ ul {
 	padding-bottom: 45px;
 	-moz-animation:myfirst 30s infinite; /* Firefox */
     -webkit-animation:myfirst 30s infinite; /* Safari and Chrome */
+}
+
+.newTopic {
+	text-transform: uppercase;
 }
 
 #add {
@@ -306,9 +312,6 @@ ul {
 	margin-top: 10px;
 }
 
-.gif {
-
-}
 
 #headline {
 	margin-bottom: 15px;
@@ -317,7 +320,7 @@ ul {
 #headline h1 {
 	color: black;
 	margin-top: 2px;
-	font-size: 1.75em;
+	font-size: 1.55em;
 	text-align: center;
 	height: 30px;
 }
@@ -332,9 +335,8 @@ ul {
 	margin-top: 20px;
 	padding: 20px;
 	border-radius: 4px;
-	background-position: 0px 0px;
-	background-repeat: repeat-y;
-	animation: animatedBackground 40s linear infinite;
+	background-repeat: repeat-x;
+	animation: slideleft 9000s infinite linear;
 }
 
 #imageDump div {
@@ -383,7 +385,7 @@ ul {
 
 }
 
-#textIn {
+#input {
 	width: 200px;
 	margin: 0 auto;
 	height: 24px;
@@ -393,6 +395,7 @@ ul {
 	font-family: sans-serif;
 	margin-bottom: 4px;
 	font-size: 14px;
+	text-transform: uppercase;
 }
 
 #title {
