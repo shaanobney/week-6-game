@@ -1,5 +1,4 @@
-Read Me
--------------
+
 # [Gif Vomit!](https://guarded-brook-40335.herokuapp.com/m "Gif Vomit")
 **Overview**
 -------------
